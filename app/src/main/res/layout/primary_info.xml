@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Barrier
+        android:id="@+id/label_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="also_known_tv_label,origin_tv_label,ingredients_tv_label"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="384dp" />
+
+    <TextView
+        android:id="@+id/also_known_tv_label"
+        style="@style/detailLabel"
+        android:text="@string/detail_also_known_as_label"
+        app:layout_constraintBaseline_toBaselineOf="@+id/also_known_tv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/also_known_tv"
+        style="@style/detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_barrier"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Steamed bao, Pork belly bun" />
+
+
+    <TextView
+        android:id="@+id/origin_tv_label"
+        style="@style/detailLabel"
+        android:text="@string/detail_place_of_origin_label"
+        app:layout_constraintBaseline_toBaselineOf="@+id/origin_tv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/origin_tv"
+        style="@style/detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_barrier"
+        app:layout_constraintTop_toBottomOf="@+id/also_known_tv"
+        tools:text="Taiwan" />
+
+    <TextView
+        android:id="@+id/description_tv_label"
+        style="@style/detailLabel"
+        android:text="@string/detail_description_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/origin_tv_label" />
+
+    <TextView
+        android:id="@+id/description_tv"
+        style="@style/detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_tv_label"
+        tools:text="Gua bao is a Taiwanese snack food consisting of a slice of stewed meat and other condiments sandwiched between flat steamed bread. The steamed bread is typically 6–8 centimetres (2.4–3.1 in) in size, semi-circular and flat in form, with a horizontal fold that, when opened, gives the appearance that it has been sliced. The traditional filling for gua bao is a slice of red-cooked porkbelly, typically dressed with stir-fried suan cai (pickled mustard greens), cilantro, and ground peanuts." />
+
+
+    <TextView
+        android:id="@+id/ingredients_tv_label"
+        style="@style/detailLabel"
+        android:text="@string/detail_ingredients_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_tv" />
+
+    <TextView
+        android:id="@+id/ingredients_tv"
+        style="@style/detail"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ingredients_tv_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_barrier"
+        tools:text="Steamed bread, Stewed meat, Condiments" />
+
+</android.support.constraint.ConstraintLayout>

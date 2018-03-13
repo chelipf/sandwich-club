@@ -12,24 +12,26 @@
 
     <ImageView
         android:id="@+id/image_iv"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="200dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/sandwich_picture_content_description"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/scrollView_detail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <ScrollView
+        android:id="@+id/scrollView_detail"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_iv">
+        app:layout_constraintStart_toEndOf="@id/image_iv"
+        app:layout_constraintTop_toTopOf="parent">
 
         <include
             layout="@layout/primary_info"
